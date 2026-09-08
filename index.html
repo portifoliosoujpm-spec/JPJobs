@@ -6,6 +6,7 @@
   <title>João Pedro Marins — Social Media & Digital Marketing</title>
 
   <!-- Font: Inter (two weights) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
@@ -14,12 +15,17 @@
   <header class="nav-wrapper">
     <nav class="nav container" aria-label="Main navigation">
       <a class="brand" href="#hero" aria-label="Ir para o topo">João Pedro Marins</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
-      <ul id="nav-links" class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#capabilities">Capabilities</a></li>
-        <li><a href="#contact">Contact</a></li>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#work">Work</a></li>
+        <li role="none"><a role="menuitem" href="#capabilities">Capabilities</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -143,7 +149,7 @@
         </div>
         <div class="case-right">
           <h4>Contexto</h4>
-          <p>Du as campanhas de deputado estadual em Minas Gerais, via agência própria (Reconceito), jul-nov 2022.</p>
+          <p>Duas campanhas de deputado estadual em Minas Gerais, via agência própria (Reconceito), jul-nov 2022.</p>
 
           <h4>Desafio</h4>
           <p>Contas com engajamento baixíssimo, num contexto de pressão eleitoral que exigia posts diários — e um tema sensível (política) onde qualquer falha de tom ou timing tem custo alto.</p>
@@ -258,7 +264,7 @@
       <p class="contact-email"><a href="mailto:joaopedrommbr@gmail.com">joaopedrommbr@gmail.com</a></p>
       <p class="small">Open to full-time roles and freelance/agency briefs — strategy, content, community, and outreach.</p>
       <p class="links-row">
-        <a href="#" class="link-muted">LinkedIn</a> · <a href="#" class="link-muted">Download CV</a>
+        <a href="#" class="link-muted" aria-label="LinkedIn placeholder">LinkedIn</a> · <a href="#" class="link-muted" aria-label="Download CV placeholder">Download CV</a>
       </p>
       <p class="copyright small">© João Pedro Marins</p>
     </footer>

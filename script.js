@@ -1,16 +1,23 @@
-// Minimal JS: mobile nav toggle + subtle reveal on scroll (IntersectionObserver)
-// No heavy animations, just a single small fade-in.
+// Enhanced JS: nav toggle accessibility + close on anchor click + reveal observer
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // Nav toggle for small screens
+  // Nav toggle for small screens: use class 'open' on nav-links
   const toggle = document.querySelector('.nav-toggle');
   const navLinks = document.getElementById('nav-links');
   if (toggle && navLinks) {
     toggle.addEventListener('click', () => {
       const expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
-      navLinks.style.display = expanded ? '' : 'flex';
+      navLinks.classList.toggle('open');
+    });
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
